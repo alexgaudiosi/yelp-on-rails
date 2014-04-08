@@ -11,7 +11,7 @@ describe 'writing reviews' do
 		click_link 'Review McDonalds'
 
 		fill_in 'Comment', with: 'Awful'
-		select '2', from: 'Score'
+		select '2', from: 'Rating'
 		click_button 'Create Review'
 
 		expect(page).to have_css '.average_review', text: '2'

@@ -12,11 +12,18 @@ describe Restaurant do
 		end
 
 		context '1 review' do
+			it 'should return the score of that review' do
+				restaurant.reviews.create(rating: 4)
+				expect(restaurant.average_score).to eq 4
+			end
+		end
+		
+		context 'multiple reviews' do
 			
 			it 'should return the score of that review' do
 				restaurant.reviews.create(rating: 4)
 				restaurant.reviews.create(rating: 2)
-				expect(restaurant.average_score).to eq '3'
+				expect(restaurant.average_score).to eq 3
 			end
 		end
 
