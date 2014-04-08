@@ -1,3 +1,33 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {  
+  height: 77px;
+  background-color: #c0392b;
+  color: white;
+  padding: 0 20px;
+}
+
+.headerwrapper {
+}
+
+.logo {
+
+}
+
+body {
+	width: 100%;
+}
+
+.wrapper {
+	height: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.central {
+	width: 80%;
+	float: right;
+	margin-top: 15px;
+}

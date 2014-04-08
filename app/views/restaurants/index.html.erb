@@ -1,12 +1,33 @@
-<% if @restaurants.any? %>
-	<% @restaurants.each do |restaurant| %>
-		<%= restaurant.name %><br>
-		<%= link_to 'Edit', edit_restaurant_path(restaurant) %><br>
-		<%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure?'} %>
-	<% end %>
-<% else %>
-	No restaurants yet
-<% end %>
+<header>
+<div class="headerwrapper">
+	<img src="http://s3-media1.ak.yelpcdn.com/assets/2/www/img/7ccfbbb81622/structural/header_stars.png">
+	<div class="logo">
+		<img src=""
+	</div>
+	</div>
+</header>
+<body>
+<div class="wrapper">
+	<div class="central">
+		<% if @restaurants.any? %>
+			<% @restaurants.each do |restaurant| %>
+				<%= restaurant.name %><br>
+				<%= link_to 'Edit', edit_restaurant_path(restaurant) %><br>
+				<%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure?'} %>
 
-<br>
-<%= link_to 'Add a restaurant', new_restaurant_path %>
+						<%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant) %>
+
+						<h3 class='average_review'>
+							<%= restaurant.average_score %>
+						</h3>
+
+			<% end %>
+		<% else %>
+			No restaurants yet
+		<% end %>
+
+		<br>
+		<%= link_to 'Add a restaurant', new_restaurant_path %>
+	</div>
+</div>
+</body>

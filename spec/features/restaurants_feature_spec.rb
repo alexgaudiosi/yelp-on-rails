@@ -44,7 +44,7 @@ describe 'the restaurants index page' do
         click_link 'Delete McDonalds'
 
         expect(page).not_to have_content 'McDonalds'
-        expect(page).to have_content 'Restaurant deleted successfully!'
+        expect(page).to have_content 'No restaurants yet'
       end
     end
   end
