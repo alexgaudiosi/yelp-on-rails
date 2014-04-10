@@ -1,3 +1,7 @@
+<% if @restaurant.errors.any? %>
+	errors will go here
+<% end %>
+
 <%= form_for @restaurant do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %>
